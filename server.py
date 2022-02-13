@@ -30,6 +30,10 @@ old_data = 'first'
 new_data = 'second'
 # Logical variables ============
 
+# Вывод для docker logs
+import sys
+
+
     # Обработка повторяемости.
 def add():
        
@@ -64,6 +68,8 @@ while True:  # В цикле бесконечном слушаем и печат
 
     print('\n=========================\n')
     print(data) #//Распечатать сырые данные вход
+    sys.stderr.write(data + '\n')
+
 
     split_data = data.split("\n")  # Нарезаем в массив строк по символу переноса строки
 
@@ -85,9 +91,9 @@ while True:  # В цикле бесконечном слушаем и печат
     # print(len(messadge_string) )    #len() тут кол во элементов в массиве
     
     #for x in message_string:  # Перебирает все элементы массива и распечатывает
-    #    print(x)  # Перебирает все элементы массива и распечатывает
+    #    print(x)  # Перебирает все элементы массива и распечатывает git config --global user.name
 
-    #add()
+    #add() git config --global user.email "you@example.com"
 
     #content = load_page_from_get_request(data) #'dadada...'.encode('utf-8')
     client_socket.send(HDRS.encode('utf-8') + answer)
