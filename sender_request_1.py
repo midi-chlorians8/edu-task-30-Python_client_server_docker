@@ -1,26 +1,37 @@
 # https://www.youtube.com/watch?v=unwP2UjWRq8
 # 30.01.2022 По мотивам видео с канала SweetCoder
 # Код отправляет раз в 2 секунды учебные сообщения
+
+#!/usr/bin/python3
 from encodings import utf_8
+from math import fabs
 from urllib import response
+from jinja2 import is_undefined
 import requests
 
 import time #Для даты + задержки в цикле
 
 # ========== Блок проверки ввода пользователем параметра (url) ========== 
-import sys
-if __name__ == "__main__":
-    if len (sys.argv) > 1:
-        print ("URL= , {}!".format (sys.argv[1] ) +'\n' )
-    else:
-        print ("Введи один параметр вида http://localhost:2000 !" +'\n' + 'Подставь свой IP и port')
-        sys.exit() #Завершить программу
+import sys #Для приёма аргументов
+print(__name__)
+
+debug = False
+
+if debug == False:
+    if __name__ == "__main__": 
+        if len (sys.argv) > 1:
+            print ("URL= , {}!".format (sys.argv[1] ) +'\n' )
+        else:
+            print ("Введи один параметр вида http://localhost:2000 !" +'\n' + 'Подставь свой IP и port')
+            sys.exit() #Завершить программу
 # ========== Блок проверки ввода пользователем параметра (url) ========== 
+    from sys import argv #Чтоб передать параметром урл в код
+    script, url = argv
 
-# url = 'http://localhost:2000'
+else:
+    url = 'http://localhost:2000'
 
-from sys import argv #Чтоб передать параметром урл в код
-script, url = argv
+
 
 i=0 #counter
 
