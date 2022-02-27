@@ -1,0 +1,31 @@
+version: "3"
+
+
+services:
+
+  
+  server:
+ 
+   
+    build: server/
+
+    
+    command: python3 ./server.py
+
+    ports:
+      - 2000:2000
+
+  
+  client:
+   
+    build: client/
+
+   
+    command: python3 ./client.py http://localhost:2000
+
+    
+    network_mode: host
+
+    
+    depends_on:
+      - server
