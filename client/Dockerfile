@@ -8,9 +8,7 @@ RUN  apt update && \
      python3 -m pip install response &&\
      python3 -m pip install urllib3
 
-
 ADD client.py /client/
-
 
 WORKDIR /client/
 
