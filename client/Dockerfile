@@ -1,14 +1,11 @@
+FROM python:3.9-slim-bullseye
+RUN pip install requests && \
 
-FROM ubuntu
+pip install response &&\
 
-RUN  apt update && \
-     apt install -y \
-     python3 python3-dev python3-pip curl && \
-     python3 -m pip install requests && \
-     python3 -m pip install response &&\
-     python3 -m pip install urllib3
-
+pip install urllib3
+WORKDIR /client/
 ADD client.py /client/
 
-WORKDIR /client/
+CMD ["python","client.py","http://localhost:2000"]
 

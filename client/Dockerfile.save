@@ -1,0 +1,14 @@
+
+#FROM ubuntu #apt update && \
+FROM python:3.9-bullseye
+RUN pip install requests && \
+
+pip install response &&\
+
+pip install urllib3
+
+ADD client.py /client/
+
+WORKDIR /client/
+
+ENTRYPOINT ["python", "client.py", "" ]

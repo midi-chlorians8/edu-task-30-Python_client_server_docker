@@ -5,17 +5,21 @@ services:
   server:
     build: server/
     command: python3 ./server.py
-    ports:
-      - 127.0.0.1:2000:2000
+#    ports:
+#      - 127.0.0.1:2000:2000
+      #- 2000:2000
+    network_mode: host
 
-#  client:
-#    build: client/.
-#    command: python3 ./client.py http://localhost:2000
-#    network_mode: host
-#    depends_on:
-#      - server
+  client:
+    build: client/
+    command: python3 ./client.py http://localhost:2000
+    #command: python3 ./client.py http://server:2000
+    network_mode: host
+    depends_on:
+      - server
+
 
 networks:
   default:
     external: false
-    name: sauna_default     
+    name: sona_default     
