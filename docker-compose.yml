@@ -3,7 +3,8 @@ version: "3"
 
 services:
   server:
-    build: server/
+    name: serv
+    build: server/.
     command: python3 ./server.py
 #    ports:
 #      - 127.0.0.1:2000:2000
