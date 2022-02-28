@@ -45,7 +45,8 @@ while True:
 
     print('I am client_1 '+ "|" + ' My_messadge:' + str(i) + 
                                       " |" + " " +  "Date:"  + str(local_time) + " " + str(status_code) )
-
+    sys.stderr.write('I am client_1 '+ "|" + ' My_messadge:' + str(i) + 
+                                      " |" + " " +  "Date:"  + str(local_time) + " " + str(status_code) )
     time.sleep(1)
     i +=1
 
