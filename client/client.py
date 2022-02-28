@@ -1,14 +1,11 @@
 # https://www.youtube.com/watch?v=unwP2UjWRq8
-# 1.3.2022 По мотивам видео с канала SweetCoder
+# 30.01.2022 По мотивам видео с канала SweetCoder
 # Код отправляет раз в 2 секунды учебные сообщения
-
-# https://github.com/midi-chlorians8/edu-task-30-Python_client_server_docker.git
 
 #!/usr/bin/python3
 from encodings import utf_8
 from math import fabs
 from urllib import response
-#from jinja2 import is_undefined
 import requests
 
 import time #Для даты + задержки в цикле
