@@ -1,11 +1,11 @@
 # https://www.youtube.com/watch?v=unwP2UjWRq8
-# 30.01.2022 По мотивам видео с канала SweetCoder
-# Код отправляет раз в 2 секунды учебные сообщения
+# 3.1.2022 По мотивам видео с канала SweetCoder
+# Код отправляет раз в сек учебные сообщения
 
 #!/usr/bin/python3
 from encodings import utf_8
 from math import fabs
-from urllib import response
+from urllib import response #urllib стандартный пакет.
 import requests
 
 import time #Для даты + задержки в цикле
@@ -45,8 +45,12 @@ while True:
 
     print('I am client_1 '+ "|" + ' My_messadge:' + str(i) + 
                                       " |" + " " +  "Date:"  + str(local_time) + " " + str(status_code) )
+
+    # Вывод для docker logs                                  
     sys.stderr.write('I am client_1 '+ "|" + ' My_messadge:' + str(i) + 
-                                      " |" + " " +  "Date:"  + str(local_time) + " " + str(status_code) )
+                                      " |" + " " +  "Date:"  + str(local_time) + " " + str(status_code) +'\n' )
+    # Вывод для docker logs
+    
     time.sleep(1)
     i +=1
 
