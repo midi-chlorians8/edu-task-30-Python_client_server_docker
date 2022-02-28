@@ -30,8 +30,8 @@ old_data = 'first'
 new_data = 'second'
 # Logical variables ============
 
-# Вывод для docker logs
-import sys
+
+import sys # Вывод для docker logs
 
 
     # Обработка повторяемости.
