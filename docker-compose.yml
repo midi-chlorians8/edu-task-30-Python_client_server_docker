@@ -19,6 +19,11 @@ services:
     depends_on:
       - server
 
+  postgres:
+    build: postgres/
+    env_file:
+       - web-variables.env
+    network_mode: host
 
 networks:
   default:
