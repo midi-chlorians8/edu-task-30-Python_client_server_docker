@@ -14,3 +14,5 @@
 https://habr.com/ru/company/ruvds/blog/450312/ -- в этой статье все просто и понятно расписано про docker-compose, и описываются действия, чтобы докеризировать примитивные сервер и клиент. 
 
 Добавлена db postgres, которая берет данные из файла web-variables.env
+Для подключения использовать команду
+psql -U<USERNAME> -h<HOSTNAME> -d<DB_NAME>
