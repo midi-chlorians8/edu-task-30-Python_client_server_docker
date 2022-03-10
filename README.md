@@ -15,4 +15,4 @@ https://habr.com/ru/company/ruvds/blog/450312/ -- в этой статье вс�
 
 Добавлена db postgres, которая берет данные из файла web-variables.env
 Для подключения использовать команду
-psql -U<USERNAME> -h<HOSTNAME> -d<DB_NAME>
+psql -U"USERNAME" -h"HOSTNAME" -d"DB_NAME"
